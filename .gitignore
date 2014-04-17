@@ -9,3 +9,5 @@ build
 release
 .sass-cache/
 .idea/
+src/bower_components
+node_modules
