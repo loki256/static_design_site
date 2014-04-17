@@ -15,6 +15,7 @@
     "src/bower_components"
   ],
   "dependencies": {
-    "jquery.scrollTo": "~1.4.9"
+    "jquery.scrollTo": "~1.4.11",
+    "lightbox2": "~2.7.1"
   }
 }
