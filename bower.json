@@ -1,0 +1,20 @@
+{
+  "name": "designer site",
+  "version": "0.0.1",
+  "authors": [
+    "georgiy.pankov@gmail.com"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src/bower_components"
+  ],
+  "dependencies": {
+    "jquery.scrollTo": "~1.4.9"
+  }
+}

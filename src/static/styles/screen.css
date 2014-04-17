@@ -1,0 +1,187 @@
+/* ---------------------------------------------------------------------------------
+   file-start: stc/voxhtml/weston-natural/screen.css 
+*/
+
+/* 
+    Weston Natural
+    by Lilia Ahner
+*/
+
+body {
+    background-image: url(bg-body-pattern.gif?v=1);
+    background-color: #f9f4ec;
+}
+
+#container {
+    background-image: url(bg-body-shadow.gif?v=1);
+}
+
+#page {
+    background: url(bg-content.gif?v=1);
+}
+
+a { color: #a85706; }
+
+#control-strip {
+    background-color: #c39867;
+}
+
+.control-strip-logo a {
+    background-image: url(logo.gif?v=1);
+}
+
+/* header ----------------------------------------------------------- */
+
+#header {
+    background-image: url(bg-header-middle.gif?v=1);
+}
+
+#header-inner {
+    background-image: url(bg-header-inner.gif?v=1);
+}
+
+#header-content {
+    background-image: url(bg-header.gif?v=1);
+}
+
+#header-name,
+#header-name a { color: #a85706; }
+
+#header-description { border-top-color: #e5c9aa; }
+
+#header-photo-inner { background-image: url(bg-header-photo-inner.gif?v=1); }
+
+#header-photo-inner img { border-color: #e5c9aa; }
+
+
+/* Connections Header */
+
+.connections-view #header { 
+    background-image: none;
+}
+
+.connections-view #header-inner { 
+    background-image: none;
+}
+
+.connections-view #connections-photos {
+    background-image: url(bg-aggregate.gif?v=1);
+}
+
+
+/* Content Styles -------------------------------------------- */
+
+.nav a:hover,
+.nav .current a {
+    color: #a85706;
+}
+
+.page-header1,
+.asset-name,
+.asset-name a,
+.page-header2,
+.enclosure-asset-name,
+.page-header3 {
+    color: #a85706;
+}
+
+/* widget styling */
+.widget a { color: #747b82; }
+
+.widget-header { 
+    background-image: url(bg-widget-header.gif?v=1); 
+    border-bottom-color: #e5c9aa;
+}
+
+.widget-header, 
+.widget-header a { color: #c37d38; }
+
+.connections-widget .widget-list .item a,
+.archive-widget ul.widget-list .item {
+    color: #747b82;
+}
+
+.media-stream-widget img { border-color: #e5c9aa; }
+
+/* asset styling */
+
+.asset-stream-list .post-asset { 
+    background-image: url(bg-asset.gif?v=1);
+}
+
+.asset-stream-grid .asset-inner,
+.enclosure .enclosure-inner,
+.user-pic img { background-color: #ebe3d6;}
+
+.asset-stream-grid .asset-image img,
+.enclosure .enclosure-inner,
+.user-pic a img,
+.user-pic img {
+    border-color: #e5c9aa;
+}
+
+.asset-meta dd,
+.asset-meta dd a { color: #747b82; }
+
+.asset-body blockquote { border-left-color: #e5c9aa; }
+
+.asset-tags-list a:hover {
+    background-color: #a85706;
+}
+
+/* Pager ------------------------------------------------------------------ */
+.pager a { color: #747b82; }
+
+.pager a:hover,
+.pager .current a { color: #a85706; }
+
+.comment-even { background-image: url(bg-comment-even.gif?v=1); }  /* Comment styling */
+
+.comment-even,
+.comment-error { background-color:  #fdfcfa; }
+
+.asset-detail .asset-containers,
+.user-pic img,
+.comment-even,
+.comment-error { border-color: #e3d0ba; }
+
+/* test */
+.widget-header .edit a  {
+    border-left-color: #e5c9aa;
+    color: #c37d38;
+}
+
+/* Icon Background Images ---------------------------------------------------*/
+
+.asset-meta-privacy span {
+    background-image: url(icon-privacy.gif?v=1);
+}
+.asset-meta-edit a {
+    background-image: url(icon-edit.gif?v=1);
+}
+.asset-meta-delete a {
+    background-image: url(icon-delete.gif?v=1);
+}
+
+.asset-meta-favorite a.favorite-function {
+    background-image: url(icon-favorite.gif?v=1);
+}
+
+.asset-meta-favorite a.is-a-favorite {
+    background-image: url(icon-favorite-on.gif?v=1);
+}
+/* .asset-meta-comments a,
+.enclosure-comments a {
+    background-image: url(icon-comment.gif?v=1);
+} */
+.asset-tags-list .asset-tags-add-tags {
+    background-image: url(icon-add.gif?v=1);
+}
+.contact-me-list .contact-email,
+.widget-list .email {
+    background-image: url(icon-email.gif?v=1);
+}
+
+
+/* file-end: stc/voxhtml/weston-natural/screen.css 
+----------------------------------------------------------------------------------*/

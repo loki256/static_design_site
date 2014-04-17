@@ -1,0 +1,30 @@
+{
+    "menu": [
+    {
+        "href":"proj1.html",
+        "image":"travells.png",
+        "desc": "Путешествия"
+    },
+    {
+        "href":"proj2.html",
+        "image":"drawings.png",
+        "desc": "Чертежи"
+    },
+    {
+        "href":"proj3.html",
+        "image":"sewing.png",
+        "desc": "Шитье"
+    },
+    {
+        "href":"proj4.html",
+        "image":"articles.png",
+        "desc": "Статьи"
+    },
+    {
+        "href":"proj5.html",
+        "image":"profession_details.png",
+        "desc": "Детали<br>профессии"
+    }
+
+    ]
+}

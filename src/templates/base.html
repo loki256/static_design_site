@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>I am a designer</title>
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+
+        <script src="bower_components/lightbox2/js/lightbox-2.6.min.js"></script>
+
+        <script src="scripts/app.js" type="text/javascript" charset="utf-8"></script>
+        <link href="bower_components/lightbox2/css/lightbox.css" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/main.css"/>
+    </head>
+    <body>
+        <div class="boarder">
+            <div class="container">
+                <div class="header">
+                    <div id="header-content">
+                    </div>
+                    <div class="header-menu">
+                        <nav>
+                            <ul>
+                            {% for item in ["Проектирование", "Галлерея", "Декор", "Контакты", "Блог"] %}
+                                <li><a href="#">{{ item }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="gap">
+                    <div class="gap-rigth"> </div>
+                    <div class="gap-left"> </div>
+                </div>
+                <div class="body">
+                    <div class="main">
+                        <div id="main-content">
+                        </div>
+                    </div>
+                    {% block right-menu %}
+                    <div class="right-menu">
+                        <a id="scrollUp" href="#">
+                            <img class="scroll" src="images/scrollUp.png"/>
+                        </a>
+                        <ul id="vertical-content">
+                        </ul>
+                        <a id="scrollDown" href="#">
+                            <img class="scroll" src="images/scrollDown.png"/>
+                        </a>
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
