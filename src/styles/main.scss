@@ -4,184 +4,192 @@ $boarder-width: 929px;
 $global-width: 869px;
 
 @font-face {
-    font-family: 'Mon Amour Two';
-    src: url('../fonts/jeVu506T.ttf') format('truetype');
-    font-style: normal;
+  font-family: 'Mon Amour Two';
+  src: url('../fonts/jeVu506T.ttf') format('truetype');
+  font-style: normal;
 }
 
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url(../images/bg-body-pattern.gif);
+  margin: 0;
+  padding: 0;
+  background-image: url(/images/bg-body-pattern.gif);
 
-    .boarder {
-        width: $boarder-width;
-        height: 909px;
-        padding-top: 30px;
-        background-image: url(../images/bg-body-shadow.gif);
-        margin: auto;
-    }
+  .boarder {
+    width: $boarder-width;
+    height: 909px;
+    padding-top: 30px;
+    background-image: url(/images/bg-body-shadow.gif);
+    margin: auto;
+  }
 }
 
 
 .container {
-    position: relative;
-    width: $global-width;
-    margin: 0 auto;
+  position: relative;
+  width: $global-width;
+  margin: 0 auto;
 
-    .header {
-        padding-top: 27px;
-        background-image: $header-background;
+  .header {
+    padding-top: 27px;
+    background-image: $header-background;
 
-        .header-content {
-            width: $global-width;
-            height: 280px;
+    .header-content {
+      width: $global-width;
+      height: 280px;
 
-            .header-photo {
-                width: inherit;
-                height: inherit;
-                background-image: url(../images/header-photo.jpg);
-                background-repeat: no-repeat;
-            }
+      .header-photo {
+        width: inherit;
+        height: inherit;
+        background: url(/images/header-photo.jpg) no-repeat;
+      }
 
-            .caption-border {
-                background-image: url(../images/bg-body-shadow.gif);
-                width: $global-width;
-                height: inherit;
+      .caption-border {
+        background-image: url(../images/bg-body-shadow.gif);
+        width: $global-width;
+        height: inherit;
+        overflow: auto;
+        font-family: 'Mon Amour Two';
+        text-align: center;
 
-                h1 {
-                    font-family: 'Mon Amour Two';
-                    font-size: 20px;
-                    font-weight: 300;
-                    padding-top: 20px;
-                    margin: 0 auto;
-                    text-align: center;
-                }
-
-                p {
-                    padding: 20px 20px;
-                    font-family: 'Mon Amour Two';
-                    font-size: 16px;
-                    margin: 0 auto;
-                    vertical-align: middle;
-                    text-align: center;
-                }
-
-            }
+        h1,h2,h3,h4,h5,h6 {
+          padding-top: 20px;
+          margin: 0 auto;
+          text-align: inherit;
+          font-weight: 300;
         }
 
-        .header-menu {
-            width: $global-width;
-            height: 55px;
-            background-image: $body-background;
-
-            nav ul {
-                list-style-type:none;
-                margin: 0 auto;
-                padding: 0;
-
-                li {
-                    margin-top: 15px;
-                    float: left;
-
-                    a {
-                        padding-left: 45px;
-                        padding-right: 45px;
-                        font-family: 'Mon Amour Two';
-                        font-size: 18px;
-                        text-decoration: none;
-                        color: maroon;
-                    }
-                }
-            }
+        h1 {
+          font-size: 26px;
         }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          padding: 20px 20px;
+          font-size: 16px;
+          margin: 0 auto;
+          vertical-align: middle;
+          text-align: inherit;
+        }
+
+      }
     }
 
-    .gap {
-        height: 15px;
-        border-bottom: solid 1px black;
-        border-top: solid 1px black;
-        background-image: $body-background;
+    .header-menu {
+      width: $global-width;
+      height: 55px;
+      background-image: $body-background;
 
-        .gap-left {
-            height: inherit;
-            width: 80%;
-            float: left;
-            border-right: solid 1px black;
-        }
+      nav ul {
+        list-style-type:none;
+        margin: 0 auto;
+        padding: 0;
 
-        .gap-rigth {
-            height: inherit;
-            width: 19%;
-            float: right;
+        li {
+          margin-top: 15px;
+          float: left;
+
+          a {
+            padding-left: 45px;
+            padding-right: 45px;
+            font-family: 'Mon Amour Two';
+            font-size: 18px;
+            text-decoration: none;
+            color: maroon;
+          }
         }
+      }
+    }
+  }
+
+  .gap {
+    height: 15px;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    background-image: $body-background;
+
+    .gap-left {
+      height: inherit;
+      width: 80%;
+      float: left;
+      border-right: solid 1px black;
     }
 
-    .body {
-        background-image: $body-background;
-        height: 500px;
-
-        .main {
-            width: 80%;
-            height: inherit;
-            float: left;
-            border-right: solid 1px black;
-            background-color: inherit;
-
-            >div {
-                display: none;
-            }
-
-            .main-content {
-                display: block;
-                margin: 10px;
-                .photo {
-                    width: 100%;
-                    height: 500 - 20px;
-                    text-align: center;
-                    img {
-                        vertical-align: middle;
-                        max-width: 100%;
-                        max-height: 100%;
-                    }
-                }
-            }
-
-        }
-
-        .right-menu {
-            width: 19%;
-            height: inherit;
-            float: right;
-
-            .scroll {
-                display: block;
-                margin: auto;
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-
-            ul {
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                height: 500 - 40px;
-
-                li img {
-                    display: block;
-                    margin: auto;
-                    margin-top: 20px;
-                    zoom: 30%;
-                }
-
-                li p {
-                    text-align: center;
-                    font-family: "Mon Amour Two";
-                }
-            }
-        }
+    .gap-rigth {
+      height: inherit;
+      width: 19%;
+      float: right;
     }
+  }
+
+  .body {
+    background-image: $body-background;
+    height: 500px;
+
+    .main {
+      width: 80%;
+      height: inherit;
+      float: left;
+      border-right: solid 1px black;
+      background-color: inherit;
+
+      >div {
+        display: none;
+      }
+
+      .main-content {
+        display: block;
+        margin: 10px;
+        .photo {
+          width: 100%;
+          height: 500 - 20px;
+          text-align: center;
+          img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+
+    }
+
+    .right-menu {
+      width: 19%;
+      height: inherit;
+      float: right;
+
+      .scroll {
+        display: block;
+        margin: 5px auto;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 500 - 40px;
+
+        li img {
+          display: block;
+          margin: 20px auto auto;
+          zoom: 30%;
+        }
+
+        li p {
+          text-align: center;
+          font-family: "Mon Amour Two";
+        }
+      }
+    }
+  }
 }
 
 
