@@ -34,6 +34,7 @@ $(document).ready(function() {
 
     var reInitModel = function(state) {
         model = new Model(state);
+        setupVerticalMenu();
     };
 
 
@@ -110,7 +111,6 @@ $(document).ready(function() {
     var model;
     reInitModel();
 
-    setupVerticalMenu();
     actions.getAction('Галлерея')();
     //actions.getAction('Проектирование')();
     //actions.getAction('Проект 1')();
