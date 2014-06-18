@@ -1,0 +1,37 @@
+<div class="{{ projectId }}">
+
+    <div class="header-content">
+        <div class="caption-border">
+            <h1>
+                {% block title %}
+                Some title here
+                {% endblock  %}
+            </h1>
+            <p>
+                {% block text %}
+                Some text here
+                {% endblock %}
+            </p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="photo">
+            <a href="images/project{{ projectId }}/0.jpg" data-lightbox="image-1asd" title="My caption"> <img src="images/project{{ projectId }}/0.jpg" alt="aaa"/> </a>
+        </div>
+    </div>
+
+    <div class="vertical-content">
+        <ul>
+            {% for item in items %}
+            <li>
+                <a href="#" onclick="$('.main-content .photo img').attr('src', 'images/project{{ projectId }}/{{ item.url }}'); $('.main-content .photo a').attr('href', 'images/project{{ projectId }}/{{ item.url }}');$('.main-content .photo a').attr('title', '{{ item.description }}');">
+                    <img src="images/project{{ projectId }}/thumb/{{ item.url }}"
+                         alt="{{ item.description }}">
+                </a>
+                <p>{{ item.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -103,7 +103,7 @@ gulp.task('heroku', function() {
 })
 
 
-gulp.task('build', ['clean', 'sass', 'templates', 'imagemin', 'copy', 'bower']);
 gulp.task('default', ['sass', 'templates', 'copy']);
-gulp.task('release', ['enableRelease', 'build', 'heroku']);
+gulp.task('build', ['clean', 'default', 'imagemin', 'bower', 'heroku']);
+gulp.task('release', ['enableRelease', 'build']);
 

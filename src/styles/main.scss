@@ -34,7 +34,7 @@ body {
         padding-top: 27px;
         background-image: $header-background;
 
-        #header-content {
+        .header-content {
             width: $global-width;
             height: 280px;
 
@@ -133,7 +133,7 @@ body {
                 display: none;
             }
 
-            #main-content {
+            .main-content {
                 display: block;
                 margin: 10px;
                 .photo {

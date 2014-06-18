@@ -1,0 +1,45 @@
+{
+    "items": [
+        {
+            "url":"0.jpg",
+            "description": "Еще чего-то"
+        },
+        {
+            "url":"1.jpg",
+            "description": "Кухня"
+        },
+        {
+            "url":"2.jpg",
+            "description": "Прихожая"
+        },
+        {
+            "url":"3.jpg",
+            "description": "Ванна"
+        },
+        {
+            "url":"4.jpg",
+            "description": "Еще чего-то"
+        }
+        ,{
+            "url":"5.jpg",
+            "description": "Еще чего-то"
+        }
+        ,{
+            "url":"6.jpg",
+            "description": "Еще чего-то"
+        }
+        ,{
+            "url":"7.jpg",
+            "description": "Еще чего-то"
+        }
+        ,{
+            "url":"8.jpg",
+            "description": "Еще чего-то"
+        }
+        ,{
+            "url":"9.jpg",
+            "description": "Еще чего-то"
+        }
+    ],
+    "projectId":"1"
+}

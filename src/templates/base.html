@@ -16,12 +16,13 @@
         <div class="boarder">
             <div class="container">
                 <div class="header">
-                    <div id="header-content">
+                    <div class="header-content">
                     </div>
                     <div class="header-menu">
                         <nav>
                             <ul>
-                            {% for item in ["Проектирование", "Галлерея", "Декор", "Контакты", "Блог"] %}
+                            {% for item in ["Проектирование", "Галлерея",
+                                "Декор", "Контакты", "Блог"] %}
                                 <li><a href="#">{{ item }}</a></li>
                             {% endfor %}
                             </ul>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="body">
                     <div class="main">
-                        <div id="main-content">
+                        <div class="main-content">
                         </div>
                     </div>
                     {% block right-menu %}
@@ -43,7 +44,7 @@
                         <a id="scrollUp" href="#">
                             <img class="scroll" src="images/scrollUp.png"/>
                         </a>
-                        <ul id="vertical-content">
+                        <ul class="vertical-content">
                         </ul>
                         <a id="scrollDown" href="#">
                             <img class="scroll" src="images/scrollDown.png"/>

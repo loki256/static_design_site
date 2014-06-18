@@ -1,9 +1,0 @@
-<div class="vertical-label" id="verticalcontent_proj{{ projId }}"></div>
-{% for item in items %}
-<li>
-    <a href="#" onclick="$('#main-content .photo img').attr('src', 'images/project{{ projId }}/{{ item.url }}'); $('#main-content .photo a').attr('href', 'images/project{{ projId }}/{{ item.url }}');$('#main-content .photo a').attr('title', '{{ item.description }}');">
-        <img src="images/project{{ projId }}/thumb/{{ item.url }}" alt="{{ item.description }}">
-    </a>
-    <p>{{ item.description }}</p>
-</li>
-{% endfor %}

@@ -1,18 +1,19 @@
 # context and tasks
 
 ## tasks
-+ second project (all context in one request)
-+ scrollbar for header
-+ lightbox gallery for projects
-+ zoom -> max_width (**bug**)
-+ contacts + blog + rearrange order on main menu
-+ show result, ask for fixes
+1. fix scroll for right-menu
+2. scrollbar for header
+3. lightbox gallery for projects
+4. zoom -> max_width (**bug**) (try in firefox, )
+5. contacts + blog + rearrange order on main menu
+7. show result, ask for fixes
 
-+ make dirs with simple file names (maincontent, headercontent) **low**
-+ scrolls must work with presses arrow **low**
-+ remove white boarders (pillows) **low**
+8. make dirs with simple file names (maincontent, headercontent) **low**
+9. scrolls must work with presses arrow **low**
+10. remove white boarders (pillows) **low**
 
 ## complited
++ second project (all context in one request)
 - try to make templates without json file
 + big image on click (jquery plugin)
 + make at least one project

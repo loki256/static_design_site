@@ -1,32 +1,17 @@
 $(document).ready(function() {
+    
     "use strict";
 
-    function Model() {
+    function Model(state) {
 
-        this.enableMap = {};
+        this.state = state;
 
-        this.testElement = function(category, name) {
-            return this.enableMap[category] == name;
+        this.setState = function(id) {
+            this.state = id;
         };
 
-        this.setElement = function(category, name) {
-            this.enableMap[category] = name;
-        };
-
-        var headerId = $('#header-content .header-content-label').attr('id');
-        this.setElement('header-content', headerId);
-
-        var verticalId = $('#vertical-content .vertical-label').attr('id');
-        this.setElement('vertical-content', verticalId);
-
-        var mainId = $('#main-content .main-label').attr('id');
-        this.setElement('main-content', mainId);
-
-        this.isEnabled = function(name) {
-            if (this.enableMap[name]) {
-                return true;
-            }
-            return false;
+        this.testState = function(id) {
+            return this.state == id;
         };
 
         $(".header-menu a").bind("click", function(event) {
@@ -38,7 +23,7 @@ $(document).ready(function() {
             return false;
         });
 
-        $("#vertical-content a").bind("click", function(event) {
+        $(".vertical-content a").bind("click", function(event) {
             var action = actions.getAction(event.target.alt);
             if (action) {
                 action();
@@ -47,34 +32,42 @@ $(document).ready(function() {
         });
     }
 
-    var reinitModel = function() {
-        model = new Model();
+    var reInitModel = function(state) {
+        model = new Model(state);
     };
 
 
     function Actions() {
 
         this._callback_map = {};
-
-        this._ajaxRequest = function(url, selector, callback) {
+        this._ajaxRequest = function(url, callback) {
             $.ajax({
                 url: url,
                 dataType: "html",
                 async: false,
                 success: function(msg) {
-                    $(selector).html(msg);
+                    if ($(".header-content", msg).length) {
+                        $(".header-content").replaceWith($(".header-content", msg));
+                    }
+                    if ($(".main-content", msg).length) {
+                        $(".main-content").replaceWith($(".main-content", msg));
+                    }
+                    if ($(".vertical-content", msg).length) {
+                        $(".vertical-content").replaceWith($(".vertical-content", msg));
+                    }
                     if (callback) {
                         callback();
                     }
                 }
             });
+
         };
 
-        this._testDomAjaxWrapper = function(category, id, url, selector) {
-            if (!model.testElement(category, id)) {
-                context._ajaxRequest(url, selector, function() {
-                    model.setElement(category, id);
-                    reinitModel();
+        this._domAjaxWrapper = function(id, url) {
+            if (!model.testState(id)) {
+                context._ajaxRequest(url, function() {
+                    model.setState(id);
+                    reInitModel(id);
                 });
             }
         };
@@ -82,82 +75,30 @@ $(document).ready(function() {
         var context = this;
 
         this._callback_map['Галлерея'] = function() {
-            context._testDomAjaxWrapper(
-                'main-content',
-                'maincontent_photo',
-                'public/maincontent_photo.html',
-                '#main-content');
-            context._testDomAjaxWrapper(
-                'vertical-content',
-                'verticalcontent_proj',
-                'public/verticalcontent_proj.html',
-                '#vertical-content');
-            context._testDomAjaxWrapper(
-                'header-content',
-                'photo_headercontent',
-                'public/photo_headercontent.html',
-                '#header-content');
+            context._domAjaxWrapper(
+                'Галлерея',
+                'public/gallery.html');
         };
 
         this._callback_map['Проектирование'] = function() {
-            context._testDomAjaxWrapper(
-                'main-content',
-                'text_maincontent',
-                'public/text_maincontent.html',
-                '#main-content');
-            context._testDomAjaxWrapper(
-                'vertical-content',
-                'verticalcontent_stuff',
-                'public/verticalcontent_stuff.html',
-                '#vertical-content');
-            context._testDomAjaxWrapper(
-                'header-content',
-                'photo_headercontent',
-                'public/photo_headercontent.html',
-                '#header-content');
+            context._domAjaxWrapper(
+                'Проектирование',
+                'public/development.html');
         };
 
         this._callback_map['Декор'] = function() {
         };
 
         this._callback_map['Проект 1'] = function() {
-            context._testDomAjaxWrapper(
-                'header-content',
-                'headercontent_proj1',
-                'public/project1/headercontent.html',
-                '#header-content');
-
-            context._testDomAjaxWrapper(
-                'main-content',
-                'maincontent_proj1',
-                'public/project1/maincontent.html',
-                '#main-content');
-
-            context._testDomAjaxWrapper(
-                'vertical-content',
-                'verticalcontent_proj1',
-                'public/project1/verticalcontent.html',
-                '#vertical-content');
+            context._domAjaxWrapper(
+                'project1',
+                'public/project1/content.html');
         };
 
         this._callback_map['Проект 2'] = function() {
-            context._testDomAjaxWrapper(
-                'header-content',
-                'headercontent_proj2',
-                'public/project2/headercontent.html',
-                '#header-content');
-
-            context._testDomAjaxWrapper(
-                'main-content',
-                'maincontent_proj2',
-                'public/project2/maincontent.html',
-                '#main-content');
-
-            context._testDomAjaxWrapper(
-                'vertical-content',
-                'verticalcontent_proj2',
-                'public/project2/verticalcontent.html',
-                '#vertical-content');
+            context._domAjaxWrapper(
+                'project2',
+                'public/project2/content.html');
         };
 
         this.getAction = function(name) {
@@ -167,7 +108,7 @@ $(document).ready(function() {
 
     var actions = new Actions();
     var model;
-    reinitModel();
+    reInitModel();
 
     setupVerticalMenu();
     actions.getAction('Галлерея')();
