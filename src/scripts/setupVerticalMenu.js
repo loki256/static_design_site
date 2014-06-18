@@ -3,11 +3,11 @@ var setupVerticalMenu = function() {
     var scrollStep = 140;
 
     var scrollMenuUp = function() {
-        $("#vertical-content").scrollTo('-=' + scrollStep + 'px', {axis:"y"});
+        $(".vertical-content>ul").scrollTo('-=' + scrollStep + 'px', {axis:"y"});
     };
 
     var scrollMenuDown = function() {
-        $("#vertical-content").scrollTo('+=' + scrollStep + 'px', {axis:"y"});
+        $(".vertical-content>ul").scrollTo('+=' + scrollStep + 'px', {axis:"y"});
     };
 
     $("#scrollUp").bind("click", function(event) {
@@ -18,15 +18,13 @@ var setupVerticalMenu = function() {
     $("#scrollDown").bind("click", function(event) {
         event.preventDefault();
         scrollMenuDown();
-    });
-
-    $("#scrollDown").mousedown(function(event) {
+    }).mousedown(function(event) {
         console.log("scrollDown");
         scrollMenuDown();
     });
 
 
-    $('#vertical-content').bind("mousewheel", function(event) {
+    $('.vertical-content').bind("mousewheel", function(event) {
         event.preventDefault();
         if (event.originalEvent.wheelDelta == "120") {
             scrollMenuUp();
