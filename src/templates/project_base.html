@@ -9,7 +9,14 @@
 
     <div class="main-content">
         <div class="photo">
-            <a href="/images/project{{ projectId }}/0.jpg" data-lightbox="image-1asd" title="My caption"> <img src="/images/project{{ projectId }}/0.jpg" alt="aaa"/> </a>
+            {% for item in items %}
+                {% if loop.first %}
+                    <a class="invisible{{ loop.index }}" href="/images/project{{ projectId }}/{{ item.url }}" data-lightbox="set" data-title={{ item.description }}> <img src="/images/project{{ projectId }}/{{ item.url }}" alt="{{ item.description }}">
+                {% else %}
+                    <a class="invisible{{ loop.index }}" href="/images/project{{ projectId }}/{{ item.url }}" data-lightbox="set" data-title="{{ item.description }}" style="display: none"> <img src="/images/project{{ projectId }}/{{ item.url }}" alt="{{ item.description }}">
+                {% endif %}
+                    </a>
+            {% endfor %}
         </div>
     </div>
 
@@ -17,11 +24,8 @@
         <ul>
             {% for item in items %}
             <li>
-                <a href="#" onclick="$('.main-content .photo img').attr('src', 'images/project{{ projectId }}/{{ item.url }}'); $('.main-content .photo a')
-                .attr('href', 'images/project{{ projectId }}/{{ item.url }}')
-                .attr('title', '{{ item.description }}');">
-                    <img src="/images/project{{ projectId }}/thumb/{{ item.url }}"
-                         alt="{{ item.description }}">
+                <a href="/images/project{{ projectId }}/{{ item.url }}" onclick="zoomPhoto({{ loop.index }})">
+                    <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}">
                 </a>
                 <p>{{ item.description }}</p>
             </li>
