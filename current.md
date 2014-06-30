@@ -1,7 +1,7 @@
 # context and tasks
 
 ## tasks
-5. contacts + blog + rearrange order on main menu
+5. contacts + blog + rearrange order on main menu (reorganize, simplify)
 7. show result, ask for fixes
 9. scrolls must work with presses arrow **low**
 10. remove white boarders (pillows) **low**

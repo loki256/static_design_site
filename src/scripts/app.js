@@ -75,9 +75,9 @@ $(document).ready(function() {
 
         var context = this;
 
-        this._callback_map['Галлерея'] = function() {
+        this._callback_map['Галерея'] = function() {
             context._domAjaxWrapper(
-                'Галлерея',
+                'Галерея',
                 'public/gallery.html');
         };
 
@@ -87,7 +87,17 @@ $(document).ready(function() {
                 'public/development.html');
         };
 
+        this._callback_map["Контакты"] = function() {
+            context._domAjaxWrapper(
+                'Контакты',
+                'public/contacts.html');
+        };
+
         this._callback_map['Декор'] = function() {
+        };
+
+        this._callback_map['Блог'] = function() {
+            window.location.href = 'http://ya-dizayner.livejournal.com/';
         };
 
         this._callback_map['Проект 1'] = function() {
@@ -111,8 +121,8 @@ $(document).ready(function() {
     var model;
     reInitModel();
 
-    actions.getAction('Галлерея')();
-    //actions.getAction('Проектирование')();
+    //actions.getAction('Галлерея')();
+    actions.getAction('Проектирование')();
     //actions.getAction('Проект 1')();
 
 });
