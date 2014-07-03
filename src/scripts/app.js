@@ -28,7 +28,27 @@ $(document).ready(function() {
             if (action) {
                 action();
             }
-            return false;
+        });
+
+        $(".fancybox").fancybox();
+
+        $('.fancybox-thumbs').fancybox({
+            prevEffect : 'none',
+            nextEffect : 'none',
+
+            closeBtn  : true,
+            arrows    : true,
+            nextClick : true,
+
+            helpers : {
+                title: {
+                    type: "inside"
+                },
+                thumbs : {
+                    width  : 50,
+                    height : 50
+                }
+            }
         });
     }
 
@@ -47,6 +67,9 @@ $(document).ready(function() {
                 dataType: "html",
                 async: false,
                 success: function(msg) {
+                    if ($(".body", msg).length) {
+                        $(".body").replaceWith($(".body", msg));
+                    }
                     if ($(".header-content", msg).length) {
                         $(".header-content").replaceWith($(".header-content", msg));
                     }
@@ -56,6 +79,7 @@ $(document).ready(function() {
                     if ($(".vertical-content", msg).length) {
                         $(".vertical-content").replaceWith($(".vertical-content", msg));
                     }
+
                     if (callback) {
                         callback();
                     }
@@ -81,10 +105,10 @@ $(document).ready(function() {
                 'public/gallery.html');
         };
 
-        this._callback_map['Проектирование'] = function() {
+        this._callback_map['Обо мне'] = function() {
             context._domAjaxWrapper(
-                'Проектирование',
-                'public/development.html');
+                'Обо мне',
+                'public/about.html');
         };
 
         this._callback_map["Контакты"] = function() {
@@ -122,7 +146,7 @@ $(document).ready(function() {
     reInitModel();
 
     //actions.getAction('Галлерея')();
-    actions.getAction('Проектирование')();
+    actions.getAction('Обо мне')();
     //actions.getAction('Проект 1')();
 
 });

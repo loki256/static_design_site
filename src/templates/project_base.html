@@ -1,34 +1,21 @@
 <div class="{{ projectId }}">
 
-    <div class="header-content">
+    <div class="main-content">
         <div class="caption-border">
             {% block title %} Some title here {% endblock  %}
             {% block text %} Some text here {% endblock %}
         </div>
     </div>
 
-    <div class="main-content">
-        <div class="photo">
-            {% for item in items %}
-                {% if loop.first %}
-                    <a class="invisible{{ loop.index }}" href="/images/project{{ projectId }}/{{ item.url }}" data-lightbox="set" data-title={{ item.description }}> <img src="/images/project{{ projectId }}/{{ item.url }}" alt="{{ item.description }}">
-                {% else %}
-                    <a class="invisible{{ loop.index }}" href="/images/project{{ projectId }}/{{ item.url }}" data-lightbox="set" data-title="{{ item.description }}" style="display: none"> <img src="/images/project{{ projectId }}/{{ item.url }}" alt="{{ item.description }}">
-                {% endif %}
-                    </a>
-            {% endfor %}
-        </div>
-    </div>
-
     <div class="vertical-content">
         <ul>
             {% for item in items %}
-            <li>
-                <a href="/images/project{{ projectId }}/{{ item.url }}" onclick="zoomPhoto({{ loop.index }})">
-                    <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}">
-                </a>
-                <p>{{ item.description }}</p>
-            </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/images/project{{ projectId }}/{{ item.url }}" title="{{ item.description }}">
+                        <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}"/>
+                    </a>
+                    <p>{{ item.description }}</p>
+                </li>
             {% endfor %}
         </ul>
     </div>

@@ -16,6 +16,6 @@
   ],
   "dependencies": {
     "jquery.scrollTo": "~1.4.11",
-    "lightbox2": "~2.7.1"
+    "fancybox": "~2.1.5"
   }
 }
