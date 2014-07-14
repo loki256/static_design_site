@@ -23,7 +23,7 @@ $(document).ready(function() {
             return false;
         });
 
-        $(".vertical-content a").bind("click", function(event) {
+        $(".horizontal-content a").bind("click", function(event) {
             var action = actions.getAction(event.target.alt);
             if (action) {
                 action();
@@ -53,6 +53,7 @@ $(document).ready(function() {
     }
 
     var reInitModel = function(state) {
+        console.log("reInitModel");
         model = new Model(state);
         setupVerticalMenu();
     };
@@ -76,22 +77,26 @@ $(document).ready(function() {
                     if ($(".main-content", msg).length) {
                         $(".main-content").replaceWith($(".main-content", msg));
                     }
-                    if ($(".vertical-content", msg).length) {
-                        $(".vertical-content").replaceWith($(".vertical-content", msg));
+                    if ($(".horizontal-content", msg).length) {
+                        $(".horizontal-content").replaceWith($(".horizontal-content", msg));
                     }
 
                     if (callback) {
                         callback();
                     }
+
+                    console.log("ajax success " + $(".horizontal-content").get(0).scrollWidth);
                 }
             });
 
         };
 
-        this._domAjaxWrapper = function(id, url) {
+        this._domAjaxWrapper = function(url) {
+            var id = url;
             if (!model.testState(id)) {
                 context._ajaxRequest(url, function() {
                     model.setState(id);
+                    console.log('ajax complete');
                     reInitModel(id);
                 });
             }
@@ -100,21 +105,15 @@ $(document).ready(function() {
         var context = this;
 
         this._callback_map['Галерея'] = function() {
-            context._domAjaxWrapper(
-                'Галерея',
-                'public/gallery.html');
+            context._domAjaxWrapper('public/gallery.html');
         };
 
         this._callback_map['Обо мне'] = function() {
-            context._domAjaxWrapper(
-                'Обо мне',
-                'public/about.html');
+            context._domAjaxWrapper('public/about.html');
         };
 
         this._callback_map["Контакты"] = function() {
-            context._domAjaxWrapper(
-                'Контакты',
-                'public/contacts.html');
+            context._domAjaxWrapper('public/contacts.html');
         };
 
         this._callback_map['Декор'] = function() {
@@ -125,15 +124,11 @@ $(document).ready(function() {
         };
 
         this._callback_map['Проект 1'] = function() {
-            context._domAjaxWrapper(
-                'project1',
-                'public/project1/content.html');
+            context._domAjaxWrapper('public/project2/content.html');
         };
 
         this._callback_map['Проект 2'] = function() {
-            context._domAjaxWrapper(
-                'project2',
-                'public/project2/content.html');
+            context._domAjaxWrapper('public/project1/content.html');
         };
 
         this.getAction = function(name) {
@@ -142,11 +137,10 @@ $(document).ready(function() {
     }
 
     var actions = new Actions();
-    var model;
-    reInitModel();
+    var model = new Model(null);
 
-    //actions.getAction('Галлерея')();
-    actions.getAction('Обо мне')();
-    //actions.getAction('Проект 1')();
+    //actions.getAction('Галерея')();
+    actions.getAction('Проект 1')();
+    //actions.getAction('Обо мне')();
 
 });

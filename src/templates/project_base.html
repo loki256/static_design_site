@@ -7,16 +7,11 @@
         </div>
     </div>
 
-    <div class="vertical-content">
-        <ul>
-            {% for item in items %}
-                <li>
-                    <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/images/project{{ projectId }}/{{ item.url }}" title="{{ item.description }}">
-                        <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}"/>
-                    </a>
-                    <p>{{ item.description }}</p>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="horizontal-content">
+        {% for item in items %}
+            <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/images/project{{ projectId }}/{{ item.url }}" title="{{ item.description }}">
+                <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}"/>
+            </a>
+        {% endfor %}
     </div>
 </div>

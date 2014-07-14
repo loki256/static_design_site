@@ -2,34 +2,50 @@ var setupVerticalMenu = function() {
 
     var scrollStep = 140;
 
-    var scrollMenuUp = function() {
-        $(".vertical-content>ul").scrollTo('-=' + scrollStep + 'px', {axis:"y"});
+    (function($) {
+        $.fn.hasHorizontalScrollBar = function() {
+            // dom way didn't work because of ajax
+            return this.children().length >= 9;
+        };
+    })(jQuery);
+
+    if (!$('.horizontal-content').hasHorizontalScrollBar()) {
+        $('.scroll-left').hide();
+        $('.scroll-right').hide();
+    } else {
+        $('.scroll-left').show();
+        $('.scroll-right').show();
+    }
+
+
+    var scrollMenuLeft = function() {
+        $(".horizontal-content").scrollTo('-=' + scrollStep + 'px', {axis:"x"});
     };
 
-    var scrollMenuDown = function() {
-        $(".vertical-content>ul").scrollTo('+=' + scrollStep + 'px', {axis:"y"});
+    var scrollMenuRight = function() {
+        $(".horizontal-content").scrollTo('+=' + scrollStep + 'px', {axis:"x"});
     };
 
-    $("#scrollUp").bind("click", function(event) {
+    $(".scroll-left").bind("click", function(event) {
         event.preventDefault();
-        scrollMenuUp();
+        scrollMenuLeft();
     });
 
-    $("#scrollDown").bind("click", function(event) {
+    $(".scroll-right").bind("click", function(event) {
         event.preventDefault();
-        scrollMenuDown();
+        scrollMenuRight();
     }).mousedown(function(event) {
-        console.log("scrollDown");
-        scrollMenuDown();
+        console.log("scroll left");
+        scrollMenuRight();
     });
 
 
-    $('.vertical-content').bind("mousewheel", function(event) {
+    $('.horizontal-content').bind("mousewheel", function(event) {
         event.preventDefault();
         if (event.originalEvent.wheelDelta == "120") {
-            scrollMenuUp();
+            scrollMenuLeft();
         } else {
-            scrollMenuDown();
+            scrollMenuRight();
         }
     });
 };
