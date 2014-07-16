@@ -1,6 +1,6 @@
 var setupVerticalMenu = function() {
 
-    var scrollStep = 140;
+    var scrollStep = 80;
 
     (function($) {
         $.fn.hasHorizontalScrollBar = function() {
