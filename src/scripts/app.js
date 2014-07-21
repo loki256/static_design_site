@@ -1,6 +1,17 @@
 $(document).ready(function() {
-    
+
     "use strict";
+
+    $(function() {
+        $('#modal').easyModal({
+            top: 100,
+            overlayOpacity: 0.3,
+            overlayColor: "#333",
+            onClose: function() {
+                $('#modal .counter').text("NaN");
+            }
+        });
+    });
 
     function Model(state) {
 
@@ -14,7 +25,7 @@ $(document).ready(function() {
             return this.state == id;
         };
 
-        $(".header-menu a").bind("click", function(event) {
+        $(".header-menu a").unbind("click").bind("click", function(event) {
             var name = event.target.text;
             var action = actions.getAction(name);
             if (action) {
@@ -23,7 +34,7 @@ $(document).ready(function() {
             return false;
         });
 
-        $(".horizontal-content a").bind("click", function(event) {
+        $(".horizontal-content a").unbind("click").bind("click", function(event) {
             var action = actions.getAction(event.target.alt);
             if (action) {
                 action();
@@ -53,7 +64,6 @@ $(document).ready(function() {
     }
 
     var reInitModel = function(state) {
-        console.log("reInitModel");
         model = new Model(state);
         setupVerticalMenu();
     };
@@ -84,8 +94,6 @@ $(document).ready(function() {
                     if (callback) {
                         callback();
                     }
-
-                    console.log("ajax success " + $(".horizontal-content").get(0).scrollWidth);
                 }
             });
 
@@ -96,7 +104,6 @@ $(document).ready(function() {
             if (!model.testState(id)) {
                 context._ajaxRequest(url, function() {
                     model.setState(id);
-                    console.log('ajax complete');
                     reInitModel(id);
                 });
             }
@@ -120,7 +127,28 @@ $(document).ready(function() {
         };
 
         this._callback_map['Блог'] = function() {
-            window.location.href = 'http://ya-dizayner.livejournal.com/';
+            var modal = $('#modal');
+            modal.trigger('openModal');
+            modal.find('.counter').text("4");
+            var timer;
+            var decreaseCounter = function() {
+                clearTimeout(timer);
+                var counter = modal.find('.counter').text();
+                counter = parseInt(counter);
+                if (isNaN(counter)) {
+                    return;
+                }
+                if (counter === 1) {
+                    modal.trigger('closeModal');
+                    $('#modal').find('.counter').text("NaN");
+                    window.location.href = 'http://ya-dizayner.livejournal.com/';
+                } else {
+                    counter = counter - 1;
+                    $('#modal').find('.counter').text(counter);
+                    timer = setTimeout(decreaseCounter, 1000);
+                }
+            };
+            timer = setTimeout(decreaseCounter, 1000);
         };
 
         this._callback_map['Проект 1'] = function() {

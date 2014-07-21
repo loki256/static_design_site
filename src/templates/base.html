@@ -28,9 +28,10 @@
                         <nav>
                             <ul>
                             {% for item in ["Обо мне", "Галерея",
-                                "Контакты", "Блог"] %}
+                                "Контакты"] %}
                                 <li><a href="#">{{ item }}</a></li>
                             {% endfor %}
+                                <li><a href="#modal" name="modal" rel="leanModal">Блог</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -51,5 +52,7 @@
                 </div>
             </div>
         </div>
+        <div id="modal"> Переход через <span class="counter">3</span></div>
     </body>
+
 </html>

@@ -17,7 +17,6 @@ body {
 
   .boarder {
     width: $boarder-width;
-//    height: 909px;
     padding-top: 30px;
     padding-bottom: 20px;
     background-image: url(/images/bg-body-shadow.gif);
@@ -217,6 +216,13 @@ body {
         }
       }
     }
+  }
+
+  #modal {
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    background: #FCF2E7;
   }
 }
 

@@ -1,14 +1,16 @@
 # context and tasks
 
 ## tasks
-6. create arrows
-13. modal window for blog
+12. Firefox mouse wheel
+14. text font and decoration
+13. favicon
 9. scrolls must work with presses arrow **low**
 10. remove white boarders (pillows) **low**
-12. Firefox mouse wheel
 7. show result, ask for fixes
 
 ## complited
+13. modal window for blog
+6. create arrows
 5. contacts + blog + rearrange order on main menu (reorganize, simplify)
 4. zoom -> max_width (**bug**) (try in firefox, )
 3. lightbox gallery for projects (two invisible blocks with photos for set)
