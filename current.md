@@ -1,7 +1,6 @@
 # context and tasks
 
 ## tasks
-12. Firefox mouse wheel
 14. text font and decoration
 13. favicon
 9. scrolls must work with presses arrow **low**
@@ -9,6 +8,7 @@
 7. show result, ask for fixes
 
 ## complited
+12. Firefox mouse wheel
 13. modal window for blog
 6. create arrows
 5. contacts + blog + rearrange order on main menu (reorganize, simplify)

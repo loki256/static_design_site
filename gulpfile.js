@@ -93,6 +93,26 @@ gulp.task('bower', function() {
     bower().pipe(gulp.dest(getDestPath('bower_components')))
 });
 
+//gulp.task('bower', function() {
+//  var jsFilter = gulpFilter('**/*.js')
+//  var cssFilter = gulpFilter('**/*.css')
+//  return bower()
+//    .pipe(jsFilter)
+//    .pipe(concat('vendor.js'))
+//    .pipe(gulp.dest(dist.js))
+//    .pipe(jsFilter.restore())
+//    .pipe(cssFilter)
+//    .pipe(concat('vendor.css'))
+//    .pipe(gulp.dest(dist.css))
+//    .pipe(cssFilter.restore())
+//    .pipe(rename(function(path) {
+//      if (~path.dirname.indexOf('fonts')) {
+//        path.dirname = '/fonts'
+//      }
+//    }))
+//    .pipe(gulp.dest(dist.vendor))
+//});
+
 gulp.task('enableRelease', function() {
     releaseMode = true;
 });

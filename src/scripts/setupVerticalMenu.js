@@ -40,9 +40,9 @@ var setupVerticalMenu = function() {
     });
 
 
-    $('.horizontal-content').bind("mousewheel", function(event) {
+    $(".horizontal-content").bind("mousewheel DOMMouseScroll", function(event) {
         event.preventDefault();
-        if (event.originalEvent.wheelDelta == "120") {
+        if (event.deltaY > 0) {
             scrollMenuLeft();
         } else {
             scrollMenuRight();
