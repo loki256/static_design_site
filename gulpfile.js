@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
+//var sass = require('gulp-sass');
 var clean = require('gulp-clean');
 var imagemin = require('gulp-imagemin');
 var swig = require('gulp-swig');
@@ -7,6 +8,7 @@ var cache = require('gulp-cache');
 var bower = require('gulp-bower');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
+var livereload = require('gulp-livereload');
 
 //var uglify = require('gulp-uglify');
 //var gutil = require('gulp-util');
@@ -33,6 +35,7 @@ gulp.task('sass', function() {
     gulp.src('src/styles/main.scss')
     .pipe(sass())
     .pipe(gulp.dest(getDestPath('styles')))
+    .pipe(livereload({auto: false}));
 });
 
 var projectName = function(arg) {
@@ -49,6 +52,7 @@ gulp.task('templates', function() {
     gulp.src('src/templates/**/*.html')
     .pipe(swig(swig_opts))
     .pipe(gulp.dest(getDestPath('public')))
+    .pipe(livereload({auto: false}));
 });
 
 gulp.task('imagemin', function () {
@@ -61,6 +65,7 @@ gulp.task('imagemin', function () {
 gulp.task('copy_html', function() {
     gulp.src(['src/*.html'])
     .pipe(gulp.dest(getDestPath()))
+    .pipe(livereload({auto: false}));
 });
 
 gulp.task('copy_fonts', function() {
@@ -80,6 +85,7 @@ gulp.task('copy_js', function() {
 gulp.task('copy', ['copy_html', 'copy_fonts', 'copy_js']);
 
 gulp.task('watch', function() {
+    livereload.listen();
     gulp.watch('src/*.html', ['copy_html']);
     gulp.watch('src/fonts/*', ['copy_fonts']);
     gulp.watch('src/scripts/*', ['copy_js']);
