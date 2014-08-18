@@ -26,9 +26,11 @@ $(document).ready(function() {
         };
 
         $(".header-menu a").unbind("click").bind("click", function(event) {
-            var name = event.target.text;
+            var name = $(event.target).text();
+            console.log("header-menu click: " + name);
             var action = actions.getAction(name);
             if (action) {
+                console.log("run action");
                 action();
             }
             return false;
@@ -168,7 +170,8 @@ $(document).ready(function() {
     var model = new Model(null);
 
     //actions.getAction('Галерея')();
-    actions.getAction('Проект 1')();
+    //actions.getAction('Проект 1')();
     //actions.getAction('Обо мне')();
 
+    actions.getAction('Контакты')();
 });

@@ -3,11 +3,13 @@
 ## tasks
 14. text font and decoration
 13. favicon
+15. bug in ie with photo
 9. scrolls must work with presses arrow **low**
 10. remove white boarders (pillows) **low**
 7. show result, ask for fixes
 
 ## complited
+15. bug in ie with photo (fixed in 14)
 12. Firefox mouse wheel
 13. modal window for blog
 6. create arrows
