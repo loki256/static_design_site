@@ -2,8 +2,6 @@ $(document).ready(function() {
 
     "use strict";
 
-    if(!console) {console={}; console.log = function(){};}
-
     $(function() {
         $('#modal').easyModal({
             top: 100,
@@ -31,7 +29,6 @@ $(document).ready(function() {
             var name = $(event.target).text();
             var action = actions.getAction(name);
             if (action) {
-                console.log("run action");
                 action();
             }
             return false;

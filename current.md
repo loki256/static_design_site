@@ -7,11 +7,12 @@ description - brief description (dot instead of space) *optional*
 example: feature_13-favicon
 
 ## tasks pool
-17. bug in ie favicon
-9. scrolls must work with presses arrow **low**
 10. remove white boarders (pillows) **low**
+19. add contacts
+20. add about
 
 ## complited
+17. bug in ie favicon
 16. bug in ie (can't load page without developer console)
 18. load two real projects
 13. favicon
@@ -34,4 +35,5 @@ example: feature_13-favicon
 
 ## aborted
 8. make dirs with simple file names (maincontent, headercontent) **low**
+9. scrolls must work with presses arrow **low**
 11. Disable links if photo already active
