@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     "use strict";
 
+    if(!console) {console={}; console.log = function(){};}
+
     $(function() {
         $('#modal').easyModal({
             top: 100,
@@ -27,7 +29,6 @@ $(document).ready(function() {
 
         $(".header-menu a").unbind("click").bind("click", function(event) {
             var name = $(event.target).text();
-            console.log("header-menu click: " + name);
             var action = actions.getAction(name);
             if (action) {
                 console.log("run action");
