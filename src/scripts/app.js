@@ -154,11 +154,11 @@ $(document).ready(function() {
         };
 
         this._callback_map['Проект 1'] = function() {
-            context._domAjaxWrapper('public/project2/content.html');
+            context._domAjaxWrapper('public/project1/content.html');
         };
 
         this._callback_map['Проект 2'] = function() {
-            context._domAjaxWrapper('public/project1/content.html');
+            context._domAjaxWrapper('public/project2/content.html');
         };
 
         this.getAction = function(name) {
@@ -169,9 +169,5 @@ $(document).ready(function() {
     var actions = new Actions();
     var model = new Model(null);
 
-    //actions.getAction('Галерея')();
-    //actions.getAction('Проект 1')();
-    //actions.getAction('Обо мне')();
-
-    actions.getAction('Контакты')();
+    actions.getAction('Галерея')();
 });

@@ -1,45 +1,53 @@
 {
+    "projectId": "1",
     "items": [
         {
-            "url":"0.jpg",
-            "description": "Еще чего-то"
+            "description": "планировка",
+            "url": "10.jpg"
         },
         {
-            "url":"1.jpg",
-            "description": "Кухня"
+            "description": "коллаж 1",
+            "url": "8.jpg"
         },
         {
-            "url":"2.jpg",
-            "description": "Прихожая"
+            "description": "коллаж 2",
+            "url": "9.jpg"
         },
         {
-            "url":"3.jpg",
-            "description": "Ванна"
+            "description": "развертки",
+            "url": "11.jpg"
         },
         {
-            "url":"4.jpg",
-            "description": "Еще чего-то"
+            "description": "визуализация 1",
+            "url": "0.jpg"
+        },
+        {
+            "description": "визуализация 2",
+            "url": "1.jpg"
+        },
+        {
+            "description": "визуализация 3",
+            "url": "2.jpg"
+        },
+        {
+            "description": "визуализация 4",
+            "url": "3.jpg"
+        },
+        {
+            "description": "визуализация 5",
+            "url": "4.jpg"
+        },
+        {
+            "description": "визуализация 6",
+            "url": "5.jpg"
+        },
+        {
+            "description": "визуализация 7",
+            "url": "6.jpg"
+        },
+        {
+            "description": "визуализация 8",
+            "url": "7.jpg"
         }
-        ,{
-            "url":"5.jpg",
-            "description": "Еще чего-то"
-        }
-        ,{
-            "url":"6.jpg",
-            "description": "Еще чего-то"
-        }
-        ,{
-            "url":"7.jpg",
-            "description": "Еще чего-то"
-        }
-        ,{
-            "url":"8.jpg",
-            "description": "Еще чего-то"
-        }
-        ,{
-            "url":"9.jpg",
-            "description": "Еще чего-то"
-        }
-    ],
-    "projectId":"1"
+    ]
 }

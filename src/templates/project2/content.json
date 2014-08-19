@@ -1,1 +1,78 @@
-{"items":[{"description":"Итоговая планировка","url":"1.jpg"},{"description":"ванная (1)","url":"1.jpg"},{"description":"ванная (3)","url":"2.jpg"},{"description":"ванная (4)","url":"3.jpg"},{"description":"ванная 2","url":"4.jpg"},{"description":"гостиная 1","url":"5.jpg"},{"description":"гостиная 2","url":"6.jpg"},{"description":"гостиная 3","url":"7.jpg"},{"description":"гостиная 4","url":"8.jpg"},{"description":"коридор 1","url":"9.jpg"},{"description":"коридор 2","url":"10.jpg"},{"description":"коридор 3","url":"11.jpg"},{"description":"кухня 1","url":"12.jpg"},{"description":"кухня 2","url":"13.jpg"},{"description":"кухня 3","url":"14.jpg"},{"description":"кухня 4","url":"15.jpg"},{"description":"планировка 1","url":"16.jpg"},{"description":"планировка 2","url":"17.jpg"},{"description":"планировка 3","url":"18.jpg"},{"description":"планировка 4","url":"19.jpg"},{"description":"спальня (1)","url":"20.jpg"},{"description":"спальня (2)","url":"21.jpg"},{"description":"спальня (3)","url":"22.jpg"},{"description":"спальня (4)","url":"23.jpg"},{"description":"спальня вариант 2 (1)","url":"24.jpg"}], "projectId": 2}
+{"items": [
+    {
+        "description": "исходный план",
+        "url": "17.jpg"
+    },
+    {
+        "description": "планировка",
+        "url": "18.jpg"
+    },
+    {
+        "description": "визуализация прихожая 1",
+        "url": "11.jpg"
+    },
+    {
+        "description": "визуализация прихожая 2",
+        "url": "12.jpg"
+    },
+    {
+        "description": "визуализация гостиная 1",
+        "url": "4.jpg"
+    },
+    {
+        "description": "визуализация гостиная 2",
+        "url": "5.jpg"
+    },
+    {
+        "description": "визуализация кухня-гостиная 1",
+        "url": "9.jpg"
+    },
+    {
+        "description": "визуализация кухня-гостиная 2",
+        "url": "10.jpg"
+    },
+    {
+        "description": "визуализация кухня 1",
+        "url": "6.jpg"
+    },
+    {
+        "description": "визуализация кухня 2",
+        "url": "7.jpg"
+    },
+    {
+        "description": "визуализация кухня 3",
+        "url": "8.jpg"
+    },
+    {
+        "description": "визуализация спальня 1",
+        "url": "13.jpg"
+    },
+    {
+        "description": "визуализация спальня 2",
+        "url": "14.jpg"
+    },
+    {
+        "description": "визуализация спальня 3",
+        "url": "15.jpg"
+    },
+    {
+        "description": "визуализация ванная 1",
+        "url": "0.jpg"
+    },
+    {
+        "description": "визуализация ванная 2",
+        "url": "1.jpg"
+    },
+    {
+        "description": "визуализация ванная 3",
+        "url": "2.jpg"
+    },
+    {
+        "description": "визуализация ванная 4",
+        "url": "3.jpg"
+    },
+    {
+        "description": "визуализация туалет",
+        "url": "16.jpg"
+    }
+], "projectId": 2}
