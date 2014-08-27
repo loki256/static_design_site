@@ -6,6 +6,9 @@ num - number of feature from task list
 description - brief description (dot instead of space) *optional*
 example: feature_13-favicon
 
+## convert commands
+convert -resize 650x460 -quality 80 idea.jpg idea.jpg
+
 ## tasks pool
 10. remove white boarders (pillows) **low**
 19. add contacts
