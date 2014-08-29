@@ -5,7 +5,7 @@ var app = express();
 
 ['public', 'images', 'bower_components', 'scripts', 'styles', 'fonts'].forEach(function(item) {
     console.log(item);
-    app.use('/' + item, express.static(path.join(__dirname, item)));
+    app.use('/' + item, express.static(path.join(__dirname, item), {maxAge: 2592000000}));
 });
 
 app.get('/', function(request, response) {

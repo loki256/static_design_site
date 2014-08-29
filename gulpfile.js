@@ -126,7 +126,7 @@ gulp.task('enableRelease', function() {
 gulp.task('heroku', function() {
     gulp.src(['heroku/*'])
         .pipe(gulp.dest(getDestPath()));
-})
+});
 
 
 gulp.task('default', ['sass', 'templates', 'copy']);
