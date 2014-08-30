@@ -2,12 +2,12 @@
     "projects": [
         {
             "id": 1,
-            "url": "2.jpg",
+            "url": "1.jpg",
             "description": "Проект 1"
         },
         {
             "id": 2,
-            "url": "1.jpg",
+            "url": "2.jpg",
             "description": "Проект 2"
         }
     ]
