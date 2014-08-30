@@ -9,5 +9,15 @@ var app = express();
 });
 
 app.get('/', function(request, response) {
-    response.sendfile(path.join(__dirname, 'public', 'base.html'));
-}).listen(port);
+    response.sendFile(path.join(__dirname, 'public', 'gallery.html'));
+})
+
+app.get('/:page', function(request, response) {
+    response.sendFile(path.join(__dirname, 'public', request.params.page));
+})
+
+app.get('/project:projectId/:page', function(request, response) {
+    response.sendFile(path.join(__dirname, 'public', 'project' + request.params.projectId, request.params.page));
+})
+
+app.listen(port);

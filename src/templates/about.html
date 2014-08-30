@@ -1,21 +1,21 @@
-<div class="about">
-    <div class="main-content">
-        <div class="text">
-            <img src="/images/about.jpg" alt="" style="width: 400px; display: block; float: right"/>
-            <h3 style="text-align: center">Здравствуйте</h3>
-            <p>
-                Я Александра Панькова, архитектор, дизайнер интерьеров.
-                </p>
-            <p>
-                Буду рада помочь вам с обустройством вашего интерьера - качественно, профессионально, с творческим подходом и вниманием к деталям.
-            </p>
-            <p>
-    Полные проекты веду в   Санкт-Петербурге и Москве.
-    Мини-проекты удаленно без ограничений.
-            </p>
-        </div>
-    </div>
+{% extends "base.html" %}
 
-    <div class="horizontal-content hidden" >
+{% block main-content %}
+<div class="main-content">
+    <div class="text">
+        <img src="/images/about.jpg" alt="" style="width: 400px; display: block; float: right"/>
+        <h3 style="text-align: center">Здравствуйте</h3>
+        <p>
+            Я Александра Панькова, архитектор, дизайнер интерьеров.
+            </p>
+        <p>
+            Буду рада помочь вам с обустройством вашего интерьера - качественно, профессионально, с творческим подходом и вниманием к деталям.
+        </p>
+        <p>
+Полные проекты веду в   Санкт-Петербурге и Москве.
+Мини-проекты удаленно без ограничений.
+        </p>
     </div>
 </div>
+{% endblock %}
+

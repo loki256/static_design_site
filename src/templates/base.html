@@ -32,11 +32,10 @@
                     <div class="header-menu">
                         <nav>
                             <ul>
-                            {% for item in ["Обо мне", "Галерея",
-                                "Контакты"] %}
-                                <li><a href="#">{{ item }}</a></li>
+                            {% for item in {about: "Обо мне", gallery: "Галерея", contacts: "Контакты"} %}
+                                <li><a href="/{{ loop.key }}.html">{{ item }}</a></li>
                             {% endfor %}
-                                <li><a href="#modal" name="modal" rel="leanModal">Блог</a></li>
+                                <li><a href="#modal" name="modal" rel="leanModal" onclick="showModal();">Блог</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -46,25 +45,20 @@
                 </div>
                 <div class="body">
                     <div class="horizontal-block">
-                        <img class="scroll-left" src="/images/scrollLeft.png">
-                        <div class="horizontal-content"> </div>
-                        <img class="scroll-right" src="/images/scrollRight.png">
+                        {% block horizontal-content %}
+                            <div class="horizontal-content hidden"> </div>
+                        {% endblock %}
                     </div>
 
                     <div class="main">
+                        {% block main-content %}
                         <div class="main-content"></div>
+                        {% endblock %}
                     </div>
                 </div>
             </div>
         </div>
         <div id="modal"> Переход через <span class="counter">3</span></div>
-
-        <!-- Yandex.Metrika informer -->
-        <a href="https://metrika.yandex.ru/stat/?id=26002812&amp;from=informer"
-           target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/26002812/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
-                                               style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:26002812,lang:'ru'});return false}catch(e){}"/></a>
-        <!-- /Yandex.Metrika informer -->
-
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
             (function (d, w, c) {
@@ -91,7 +85,6 @@
         </script>
         <noscript><div><img src="//mc.yandex.ru/watch/26002812" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
-
     </body>
 
 </html>
