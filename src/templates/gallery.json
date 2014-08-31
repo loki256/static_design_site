@@ -3,12 +3,17 @@
         {
             "id": 1,
             "url": "1.jpg",
-            "description": "Проект 1"
+            "description": "Детская, пахнущая морем..."
         },
         {
             "id": 2,
             "url": "2.jpg",
-            "description": "Проект 2"
+            "description": "Пряная корица"
+        },
+        {
+            "id": 3,
+            "url": "3.jpg",
+            "description": "Свежий бриз"
         }
     ]
 }

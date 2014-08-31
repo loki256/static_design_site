@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "description": "планировка",
+            "url": "3.jpg"
+        },
+        {
+            "description": "гостиная",
+            "url": "0.jpg"
+        },
+        {
+            "description": "кухня",
+            "url": "2.jpg"
+        },
+        {
+            "description": "спальня марии",
+            "url": "5.jpg"
+        },
+        {
+            "description": "детская",
+            "url": "1.jpg"
+        },
+        {
+            "description": "прихожая и ванная",
+            "url": "4.jpg"
+        }
+    ],
+    "projectId": 3
+}
