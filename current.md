@@ -10,11 +10,12 @@ example: feature_13-favicon
 convert -resize 650x460 -quality 80 idea.jpg idea.jpg
 
 ## tasks pool
+21. sitemap xml
 10. remove white boarders (pillows) **low**
-19. add contacts
-20. add about
 
 ## complited
+19. add contacts
+20. add about
 17. bug in ie favicon
 16. bug in ie (can't load page without developer console)
 18. load two real projects
