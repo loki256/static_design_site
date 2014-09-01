@@ -14,6 +14,16 @@
             "id": 3,
             "url": "3.jpg",
             "description": "Свежий бриз"
+        },
+        {
+            "id": 4,
+            "url": "4.jpg",
+            "description": "Распашонка П-44Т"
+        },
+        {
+            "id": 5,
+            "url": "5.jpg",
+            "description": "Легкий прованс"
         }
     ]
 }

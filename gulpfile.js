@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
-//var sass = require('gulp-sass');
 var clean = require('gulp-clean');
 var imagemin = require('gulp-imagemin');
 var swig = require('gulp-swig');
@@ -10,7 +9,7 @@ var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var livereload = require('gulp-livereload');
 
-//var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify');
 //var gutil = require('gulp-util');
 
 var releaseMode = false;
@@ -77,7 +76,7 @@ gulp.task('copy_js', function() {
     gulp.src(['src/scripts/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(concat("app.js"))
     .pipe(gulp.dest(getDestPath('scripts')))
 });

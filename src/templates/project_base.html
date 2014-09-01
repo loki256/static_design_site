@@ -1,21 +1,21 @@
 {% extends "base.html" %}
+
+{% block horizontal-content %}
+    <img class="scroll-left" src="/images/scrollLeft.png" style="display: block;">
+    <div class="horizontal-content">
+        {% for item in items %}
+            <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/images/project{{ projectId }}/{{ item.url }}" title="{{ item.description }}">
+                <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}">
+            </a>
+        {% endfor %}
+    </div>
+    <img class="scroll-right" src="/images/scrollRight.png" style="display: block;">
+{% endblock %}
+
 {% block main-content %}
 <div class="main-content">
-    <div class="caption-border">
-        {% block title %} Some title here {% endblock  %}
-        {% block text %} Some text here {% endblock %}
-    </div>
+    {% block title %} Some title here {% endblock  %}
+    {% block text %} Some text here {% endblock %}
 </div>
 {% endblock %}
 
-{% block horizontal-content %}
-<img class="scroll-left" src="/images/scrollLeft.png" style="display: block;">
-<div class="horizontal-content">
-    {% for item in items %}
-        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/images/project{{ projectId }}/{{ item.url }}" title="{{ item.description }}">
-            <img src="/images/project{{ projectId }}/thumb/{{ item.url }}" alt="{{ item.description }}"/>
-        </a>
-    {% endfor %}
-</div>
-<img class="scroll-right" src="/images/scrollRight.png" style="display: block;>
-{% endblock %}

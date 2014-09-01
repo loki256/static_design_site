@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "description": "планировка 1",
+            "url": "2.jpg"
+        },
+        {
+            "description": "планировка 2",
+            "url": "3.jpg"
+        },
+        {
+            "description": "подбор мебели",
+            "url": "4.jpg"
+        },
+        {
+            "description": "кухня-прихожая",
+            "url": "1.jpg"
+        },
+        {
+            "description": "гостиная",
+            "url": "0.jpg"
+        },
+        {
+            "description": "спальня",
+            "url": "5.jpg"
+        }
+    ],
+    "projectId": 5
+}
